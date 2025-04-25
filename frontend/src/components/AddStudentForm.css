@@ -1,0 +1,106 @@
+.form-container {
+  background: #2c2f38;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  padding: 3rem 2.5rem;
+  min-width: 380px;
+  max-width: 700px; /* Wider container */
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.form-container:hover {
+  transform: scale(1.02);
+}
+
+.form-title {
+  color: #00bcd4;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.5px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.input-group {
+  margin-bottom: 2rem;
+  display: flex; /* Use flexbox for horizontal alignment */
+  align-items: center; /* Vertically center the label and input */
+  gap: 15px; /* Add space between label and input */
+  width: 100%;
+}
+
+.input-group label {
+  font-weight: 600;
+  color: #d0d0d0;
+  margin-bottom: 0;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  width: 30%; /* Set width to 30% for the label */
+  text-align: left;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="date"],
+.input-group input[type="number"] {
+  width: 70%; /* Wider input fields */
+  padding: 16px 18px; /* Increased padding for larger inputs */
+  border-radius: 12px; /* Larger border radius for inputs */
+  border: 1.8px solid #3c3f47;
+  font-size: 1.2rem; /* Increased font size for readability */
+  background: #383d47;
+  color: #f1f1f1;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="email"]:focus,
+.input-group input[type="date"]:focus,
+.input-group input[type="number"]:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 12px rgba(76, 175, 80, 0.4);
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 10px;
+  color: #d0d0d0;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 20px; /* Increased checkbox size */
+  height: 20px; /* Increased checkbox size */
+  margin-right: 10px; /* Space between checkbox and label */
+}
+
+.submit-btn {
+  background: linear-gradient(90deg, #007bff 0%, #0056b3 100%);
+  color: #fff;
+  padding: 16px 0;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #004085;
+  transform: translateY(-2px);
+}
+
+.submit-btn:active {
+  transform: translateY(1px);
+}

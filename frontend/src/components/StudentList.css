@@ -1,0 +1,192 @@
+.table-wrapper {
+  max-width: 1140px;
+  margin: 40px auto; /* Horizontally centered */
+  padding: 30px 20px;
+  background-color: #1c1c1e;
+  border-radius: 20px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.6);
+  font-family: 'Segoe UI', sans-serif;
+  color: #f1f1f1;
+}
+
+/* Header */
+.table-wrapper h2 {
+  font-size: 2.8rem;
+  color: #09cef0;
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+/* Table wrapper (no scroll) */
+.table-wrapper {
+  width: 100%;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  table-layout: auto; /* Let columns auto size based on content */
+  border: 1px solid #444;
+}
+
+
+
+/* Ensure table and its children use border-box sizing */
+table, thead, tbody, th, td, tr {
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  table-layout: auto; /* Let columns auto size based on content */
+  border: 1px solid #444;
+  margin: 0; /* Remove any margin */
+}
+
+/* Table headers */
+thead th {
+  background-color: #2c2c2e;
+  color: #14b2c4;
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  border: 1px solid #444;
+  vertical-align: middle;
+  height: 60px; /* Increase cell height, not font size */
+}
+
+/* Table rows */
+tbody tr {
+  background-color: #2a2a2c;
+  transition: background-color 0.2s ease;
+  border: 1px solid #ededf3;
+}
+
+tbody tr:hover {
+  background-color: #343436;
+}
+
+/* Table cells */
+td {
+  padding: 18px;
+  color: #e5e5e7;
+  vertical-align: middle;
+  white-space: nowrap;        /* Prevent wrapping */
+  text-overflow: ellipsis;    /* Show ellipsis for overflow */
+  overflow: hidden;           /* Hide overflow text */
+  box-sizing: border-box;
+  border: 1px solid #858383;
+  text-align: left;
+}
+
+/* Action buttons inside td */
+td a,
+td button {
+  display: inline-block;
+  margin-right: 12px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 2px solid;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Edit Link */
+td a {
+  border-color: #0a84ff;
+  color: #0a84ff;
+}
+
+td a:hover {
+  background-color: #0a84ff;
+  color: white;
+}
+
+/* Delete Button */
+td button {
+  border-color: #ff453a;
+  color: #ff453a;
+  background: transparent;
+}
+
+td button:hover {
+  background-color: #ff453a;
+  color: white;
+}
+
+/* No students row */
+td[colspan="8"] {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  padding: 40px 0;
+  background-color: #2c2c2e;
+  border-radius: 12px;
+  border: 1px solid #444;
+}
+
+/* Responsive fallback */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 20px;
+    background-color: #2c2c2e;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #444;
+  }
+
+  td {
+    padding: 12px 16px;
+    text-align: left;
+    position: relative;
+    border: 1px solid #3a3a3c;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 16px;
+    top: 12px;
+    font-weight: bold;
+    color: #999;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+
+  td a,
+  td button {
+    display: block;
+    margin-bottom: 10px;
+  }
+}

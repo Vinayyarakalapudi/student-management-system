@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --bg-primary: #343435;
+  --bg-secondary: #bbbbbf;
+  --accent-color: #00bcd4;
+  --text-main: #f7f9fa;
+  --text-muted: #b0b3b8;
+  --hover-dark: #35363a;
+  --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.18);
+  --shadow-heavy: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-main);
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  width: 100%;
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow-light);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.navbar-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.7rem 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+}
+.nav-link {
+  color: var(--text-main);
+  font-size: 1.08rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.5rem 1.1rem;
+  border-radius: 6px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.nav-link:hover {
+  background: var(--hover-dark);
+  color: var(--accent-color);
+}
+.navbar-logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  letter-spacing: 1.2px;
+  padding-left: 2rem;
+  user-select: none;
+  white-space: nowrap;
+}
+
+/* --- HERO SECTION --- */
+.home-hero {
+    background: #7e7d7d; /* Replace this with your desired color */
+    color: #fff;
+    border-radius: 16px;
+    padding: 3.5rem 2rem 2.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(202, 200, 200, 0.18);
+    max-width: 650px;
+    margin: 2.5rem auto 1.5rem auto;
+  }
+  
+.home-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  letter-spacing: -1px;
+  color: var(--accent-color);
+}
+.home-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* --- MEDIA QUERIES --- */
+@media (max-width: 900px) {
+  .navbar-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.7rem;
+    padding: 0.7rem 1vw;
+  }
+  .navbar-links {
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+  .navbar-logo {
+    text-align: right;
+    padding-left: 0;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+  }
+  .home-hero {
+    padding: 2rem 1rem 1.5rem 1rem;
+    max-width: 98vw;
+  }
+}
