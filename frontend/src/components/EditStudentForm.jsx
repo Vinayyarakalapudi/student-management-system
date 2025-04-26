@@ -11,7 +11,7 @@ const EditStudentForm = () => {
   useEffect(() => {
     const fetchStudent = async () => {
       try {
-        const res = await axios.get(`http://localhost:3001/students/${id}`);
+        const res = await axios.get(`https://student-management-system-4-7rum.onrender.com/students/${id}`);
         setFormData(res.data);
       } catch (error) {
         toast.error('Failed to load student data');
@@ -31,7 +31,7 @@ const EditStudentForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3001/students/${id}`, formData);
+      await axios.put(`https://student-management-system-4-7rum.onrender.com/students/${id}`, formData);
       toast.success('Student updated successfully');
       navigate('/students');
     } catch (error) {
