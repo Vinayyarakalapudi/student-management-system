@@ -12,10 +12,13 @@ app.use(express.json());
 const cors = require('cors');
 const corsOptions = {
   origin: process.env.CLIENT_URL || 'http://localhost:3000', // Set your client URL
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],      // <-- ADD OPTIONS here
   allowedHeaders: ['Content-Type'],
 };
 app.use(cors(corsOptions));
+
+// Handle preflight OPTIONS requests
+app.options('*', cors(corsOptions)); // <-- ADD THIS LINE
 
 // Connect to MongoDB
 connectDB();
