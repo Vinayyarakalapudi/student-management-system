@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+const BASE_URL = `${import.meta.env.VITE_API_URL}/students`;
 const BASE_URL = 'https://student-management-system-4-7rum.onrender.com/students'; // backend deployed URL
 
 export const getStudents = () => axios.get(BASE_URL);
