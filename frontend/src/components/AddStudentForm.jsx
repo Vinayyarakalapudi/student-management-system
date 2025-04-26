@@ -25,7 +25,7 @@ const AddStudentForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3001/students', formData);
+      await axios.post('https://student-management-system-4-7rum.onrender.com/students', formData);
       toast.success('Student added successfully');
       navigate('/students');
     } catch (error) {
