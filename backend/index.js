@@ -4,7 +4,12 @@ const connectDB = require('./DB/ConnectToDB');
 const studentRoutes = require('./Routes/StudentRoutes');
 
 
-
+const corsOptions = {
+  origin: process.env.CLIENT_URL || 'http://localhost:3000',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
+  allowedHeaders: ['Content-Type'],
+};
 const app = express();
 app.use(cors());
 app.use(express.json());
