@@ -11,7 +11,7 @@ const StudentList = () => {
 
   const fetchStudents = async () => {
     try {
-      const res = await axios.get('http://localhost:3001/students');
+      const res = await axios.get('https://student-management-system-4-7rum.onrender.com/students');
       setStudents(res.data);
     } catch (error) {
       toast.error('Failed to fetch students');
@@ -38,7 +38,7 @@ const StudentList = () => {
 
   const deleteStudent = async (id) => {
     try {
-      await axios.delete(`http://localhost:3001/students/${id}`);
+      await axios.delete(`https://student-management-system-4-7rum.onrender.com/students/${id}`);
       toast.success('Student deleted successfully');
       fetchStudents();
     } catch (error) {
